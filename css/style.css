@@ -71,10 +71,11 @@ html, body{
 
 #central_section{
 	margin: 0px 0px 50px 0px;
- 	clear: both;
-	padding:20px;
- 	text-align: center;
+  padding:20px;
  	color: #e4f9f5;
+	margin: 0 auto;
+  max-width: 800px;
+
 }
 
 h1{
