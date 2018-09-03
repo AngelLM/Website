@@ -13,20 +13,17 @@
 	height: 75px;
 }
 
+#subtitle{
+  margin: 30px 0px 0px 0px;
+	font-size: 25px;
+}
+
 #title a{
 	text-decoration: none;
 }
 
 a{
 		color:#40514e;
-}
-
-#subtitle{
-	font-family: 'Space Mono',serif;
-  margin: 30px 0px 0px 0px;
-	text-align: center;
-	font-size: 25px;
-	height: 75px;
 }
 
 #subtitle a{
@@ -41,7 +38,7 @@ html, body{
 
 #left_section{
 	float: left;
-  margin: 10px 0px 10px 0px;
+  margin: 30px 0px 10px 0px;
   padding: 10px;
   height: auto;
   width: 300px;
@@ -49,7 +46,7 @@ html, body{
 
 #right_section{
 	float: left;
-  margin: 10px 0px 10px 0px;
+  margin: 30px 0px 10px 0px;
   padding: 10px;
   height: auto;
   width: 300px;
@@ -128,13 +125,6 @@ p a{
   margin: 0 auto;
 }
 
-#About_Text{
-	margin-top:-10px;
-	font-size: 16px;
-}
-
 #Footer_Text{
 	color: #e4f9f5;
 }
-
-
