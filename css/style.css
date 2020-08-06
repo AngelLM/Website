@@ -1,12 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Rajdhani);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+html, body{
+	min-height: 100%;
+}
+
 body{
-	background-image: url("../img/back.png");
+	background-image: url("../img/back.jpg");
+	background-size: cover;
 	background-position-x: center;
-  background-repeat: no-repeat; /* Do not repeat the image */
-	background-color: #cccccc;
+	background-repeat: no-repeat;
+	background-color: #3d545c;
 	color:#f3f3f3;
+	
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
 }
 
 p{
@@ -29,26 +39,25 @@ hr{
 
 #central_section{
 	margin: 0px 0px 50px 0px;
-  padding:20px;
+	padding:20px;
  	color: #f3f3f3;
 	margin: 0 auto;
-  max-width: 900px;
+	max-width: 900px;
 
 }
 
 #title{
 	font-family: 'Rajdhani', sans-serif;
-  margin: 30px 0px 40px 0px;
+  margin: 30px 0px 20px 0px;
 	text-align: center;
 	font-size: 120px;
-	height: 120px;
 }
 
 #foto{
 	height: 200px;
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 20px;
 }
 
@@ -62,8 +71,12 @@ hr{
 
 .image-holder{
 	 display: inline-block;
-   margin: 10px;
+   margin: 20px 20px 10px 20px;
 }
+
+.icon-image{
+		height: 40px;
+	}
 
 .link-holder{
 	  display: inline-block;
@@ -73,9 +86,42 @@ hr{
 	  text-decoration: none;
 }
 
- .wrapper{
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -2em;
+@media screen and (orientation: landscape) {
+	p{
+		font-size: 18px;
+  }
+	
+  .link-holder{
+		font-size: 40px;
+  }
+	
+	#foto{
+		height: 200px;
+  }
+	
+	.icon-image{
+		height: 40px;
+	}
 }
+
+
+
+@media screen and (orientation: portrait) {
+	p{
+		font-size: 30px;
+  }
+	
+  .link-holder{
+		font-size: 60px;
+  }
+	
+	#foto{
+		height: 350px;
+  }
+	
+	.icon-image{
+		height: 80px;
+	}
+}
+
+
