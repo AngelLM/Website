@@ -1,127 +1,471 @@
-@import url(https://fonts.googleapis.com/css?family=Rajdhani);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+:root {
+  --main-color1: #1a1a1a;
+  --main-color2: #346751;
+  --main-color3: #C84B31;
+  --main-color4: #FFFFFF;
+}
 
-html, body{
-	min-height: 100%;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body{
-	background-image: url("../img/back.jpg");
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
-	background-color: #3d545c;
-	color:#f3f3f3;
-	
-	text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
 }
 
-p{
-	margin: 0px 0px 15px 0px;
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-	color:#f3f3f3;
-	font-size: 18px;
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color4)
 }
 
-a{
-	color:#f3f3f3;
-	text-decoration: none;
+h1 {
+  font-size: 6rem;
 }
 
-hr{
-	margin-top:20px;
-	border: 1px solid #f3f3f3;
+h2 {
+  font-size: 4.2rem;
 }
 
-#central_section{
-	margin: 0px 0px 50px 0px;
-	padding:20px;
- 	color: #f3f3f3;
-	margin: 0 auto;
-	max-width: 900px;
-
+#navbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-color3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-#title{
-	font-family: 'Rajdhani', sans-serif;
-  margin: 30px 0px 20px 0px;
-	text-align: center;
-	font-size: 120px;
+#navbar>a{
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  color: var(--main-color4);
+  font-size: 2.2em;
+  font-weight: 500;
 }
 
-#foto{
-	height: 200px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 20px;
+#navbar>a:hover{
+  background-color: var(--main-color2);
 }
 
-#social-section{
-	text-align: center;
+#navbar>a:last-child{
+  margin: 0 20px 0 0;
 }
 
-#project-section{
-	text-align: center;
+main{
+  display: flex;
+  flex-direction: column;
 }
 
-.image-holder{
-	 display: inline-block;
-   margin: 20px 20px 10px 20px;
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color4);
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  width: 100%;
+  height: 100vh;
 }
 
-.icon-image{
-		height: 40px;
-	}
-
-.link-holder{
-	  display: inline-block;
-    margin: 10px 20px 10px 20px;
-	  font-family: 'Rajdhani', sans-serif;
-	  font-size: 40px;
-	  text-decoration: none;
+#profile-photo{
+  border-radius: 50%;
+  border: solid 10px var(--main-color4);
+  width: 300px;
 }
 
-@media screen and (orientation: landscape) {
-	p{
-		font-size: 18px;
+#typing-text{
+  display: flex;
+  flex-direction: row;
+  margin: -30px 0 0 0;
+}
+
+#type-text{
+  color: var(--main-color3);
+  font-size: 2.5em;
+  font-style: italic;
+  content: "";
+}
+
+#border {
+  color: var(--main-color3);
+  font-size: 2.5em;
+  font-style: italic;
+  rgba(0,255,0,.75);
+  width: 15px;
+  animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+@keyframes animated-cursor{
+  from{color: var(--main-color3);}
+  to{color: transparent;}
+}
+
+#projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color2);
+  min-height: 100vh;
+  padding: 5em 2em;
+}
+
+#projects>h2{
+  margin-bottom: 50px;
+}
+
+#project-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 6em;
+}
+
+.project-tile{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  height: auto;
+  background-color: var(--main-color1);
+  box-shadow: 2px 2px 2px black;
+  text-decoration: none;
+}
+
+.project-tile:hover .link-decoration{
+    color: var(--main-color2);
+    transition: color 0.3s ease-in;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-title{
+  font-size: 3em;
+  color: var(--main-color4);
+  align-self: center;
+  margin: auto;
+}
+
+.link-decoration{
+  color: transparent;
+  transition: color 0.5s ease-out;
+}
+
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color1);
+  width: 100%;
+  height: 100vh;
+}
+
+#links-section{
+  display: flex;
+  flex-direction: row;
+  grid-gap: 10vh;
+  margin-top: 5em;
+}
+
+.logo-img{
+  height: 60px;
+}
+
+.logo-img:hover{
+  animation-name: logo-hover;
+  animation-duration: 500ms;
+}
+
+@keyframes logo-hover{
+  20%{
+    transform:rotate(10deg);
   }
-	
-  .link-holder{
-		font-size: 40px;
+  60%{
+    transform:rotate(-10deg);
   }
-	
-	#foto{
-		height: 200px;
+  80%{
+    transform:rotate(0deg);
   }
-	
-	.icon-image{
-		height: 40px;
-	}
 }
 
 
+@media (max-height: 700px) { 
+  h1{
+    font-size: 5rem;
+  }
+  #profile-photo{
+    border: solid 8px var(--main-color4);
+    width: 250px;
+  }
+}
 
-@media screen and (orientation: portrait) {
-	p{
-		font-size: 30px;
+@media (max-height: 600px) { 
+  h1{
+    font-size: 4rem;
   }
-	
-  .link-holder{
-		font-size: 60px;
+  #profile-photo{
+    border: solid 6px var(--main-color4);
+    width: 200px;
   }
-	
-	#foto{
-		height: 350px;
-  }
-	
-	.icon-image{
-		height: 80px;
-	}
 }
 
 
+@media (max-width: 900px) { 
+  #project-grid{
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-gap: 6em;
+  }
+}
+
+@media (max-width: 600px) { 
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+  
+  #profile-photo{
+    border: solid 8px var(--main-color4);
+    width: 250px;
+  }
+  
+  #project-grid{
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-gap: 6em;
+  }
+  
+  #links-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5em;
+  }
+  
+}
+
+#type-text:after {
+  content: "";
+  animation: type-text 7.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+  @keyframes type-text {
+  0% {
+    content: "a";
+    }
+2% {
+    content: "a ";
+    }
+4% {
+    content: "a S";
+    }
+6% {
+    content: "a St";
+    }
+8% {
+    content: "a Sta";
+    }
+10% {
+    content: "a Stac";
+    }
+12% {
+    content: "a Stack";
+    }
+14% {
+    content: "a Stack ";
+    }
+16% {
+    content: "a Stack O";
+    }
+18% {
+    content: "a Stack Ov";
+    }
+20% {
+    content: "a Stack Ove";
+    }
+22% {
+    content: "a Stack Over";
+    }
+24% {
+    content: "a Stack Overf";
+    }
+26% {
+    content: "a Stack Overfl";
+    }
+28% {
+    content: "a Stack Overfl";
+    }
+30% {
+    content: "a Stack Overflo";
+  }
+32% {
+    content: "a Stack Overflow";
+  }
+34% {
+    content: "a Stack Overflow ";
+  }
+36% {
+    content: "a Stack Overflow s";
+  }
+38% {
+    content: "a Stack Overflow se";
+  }
+40% {
+    content: "a Stack Overflow sea";
+  }
+42% {
+    content: "a Stack Overflow sear";
+  }
+44% {
+    content: "a Stack Overflow searc";
+  }
+46% {
+    content: "a Stack Overflow search";
+  }
+48% {
+    content: "a Stack Overflow searche";
+  }
+50% {
+    content: "a Stack Overflow searcher";
+  }
+54% {
+    content: "a Stack Overflow searcher";
+  }
+54.5% {
+    content: "a Stack Overflow searche";
+  }
+55% {
+    content: "a Stack Overflow search";
+  }
+55.5% {
+    content: "a Stack Overflow searc";
+  }
+56% {
+    content: "a Stack Overflow sear";
+  }
+56.5% {
+    content: "a Stack Overflow sea";
+  }
+57% {
+    content: "a Stack Overflow se";
+  }
+57.5% {
+    content: "a Stack Overflow s";
+  }
+58% {
+    content: "a Stack Overflow ";
+  }
+58.5% {
+    content: "a Stack Overflow";
+  }
+59% {
+    content: "a Stack Overflo";
+  }
+59.5% {
+    content: "a Stack Overfl";
+  }
+60% {
+    content: "a Stack Overf";
+  }
+60.5% {
+    content: "a Stack Over";
+  }
+61% {
+    content: "a Stack Ove";
+  }
+61.5% {
+    content: "a Stack Ov";
+  }
+62% {
+    content: "a Stack O";
+  }
+62.5% {
+    content: "a Stack ";
+  }
+63% {
+    content: "a Stack";
+  }
+63.5% {
+    content: "a Stac";
+  }
+64% {
+    content: "a Sta";
+  }
+64.5% {
+    content: "a St";
+  }
+65% {
+    content: "a S";
+  }
+65.5% {
+    content: "a ";
+  }
+68% {
+    content: "a t";
+  }
+70% {
+    content: "a tr";
+  }
+72% {
+    content: "a tra";
+  }
+74% {
+    content: "a trai";
+  }
+76% {
+    content: "a train";
+  }
+78% {
+    content: "a traine";
+  }
+80% {
+    content: "a trainee";
+  }
+82% {
+    content: "a trainee ";
+  }
+84% {
+    content: "a trainee d";
+  }
+86% {
+    content: "a trainee de";
+  }
+88% {
+    content: "a trainee dev";
+  }
+90% {
+    content: "a trainee deve";
+  }
+92% {
+    content: "a trainee devel";
+  }
+94% {
+    content: "a trainee develo";
+  }
+96% {
+    content: "a trainee develop";
+  }
+98% {
+    content: "a trainee develope";
+  }
+100% {
+    content: "a trainee developer";
+  }
+}
+ 
