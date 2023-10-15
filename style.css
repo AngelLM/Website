@@ -1,0 +1,576 @@
+:root {
+  --main-color1: #1a1a1a;
+  --main-color2: #346751;
+  --main-color3: #C84B31;
+  --main-color4: #FFFFFF;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color4)
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+#navbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-color3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Coloca "logo" a la izquierda y "nav-links" a la derecha */
+}
+
+#navbar-links{
+  align-items: center;
+  padding: 20px 30px 20px 30px;
+}
+
+#logo{
+  align-items: center;
+  padding-left: 20px;
+}
+
+#navbar-links>a{
+  padding: 20px 30px 20px 30px;
+  text-decoration: none;
+  color: var(--main-color4);
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+#navbar-links>a:hover{
+  background-color: var(--main-color2);
+}
+
+#navbar-links>a:last-child{
+  margin: 0 20px 0 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease-in-out; /* Transición suave para la rotación */
+}
+
+.logo:hover {
+  transform: rotate(90deg); /* Rota 90 grados a la derecha cuando el mouse está encima */
+}
+
+.fondo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color2);
+}
+
+.A{
+  position: absolute;
+  width: 100%; /* Ancho del polígono */
+  height: 100%; /* Alto del polígono */
+  background-color: #ffffff; /* Color de fondo del polígono */
+  clip-path: polygon(0% 100%, 50% 0%, 55.5% 11%, 11% 100%); /* Define el polígono */
+}
+
+.L{
+  position: absolute;
+  width: 100%; /* Ancho del polígono */
+  height: 100%; /* Alto del polígono */
+  background-color: #ffffff; /* Color de fondo del polígono */
+  clip-path: polygon(15.5% 100%, 47.32% 36.37%, 47.32% 83.91%, 39.32% 83.91%, 39.32% 74.37%, 31.42% 90.16%, 79.58% 90.16%, 84.5% 100%); /* Define el polígono */
+  transition: clip-path 0.25s ease-in-out; /* Establece una animación suave */
+}
+
+.logo:hover .L{
+  clip-path: polygon(15.5% 100%, 15.5% 100%, 15.5% 100%, 15.5% 100%, 15.5% 100%, 15.5% 100%, 15.5% 100%, 15.5% 100%);
+}
+
+
+.M{
+  position: absolute;
+  width: 100%; /* Ancho del polígono */
+  height: 100%; /* Alto del polígono */
+  background-color: #ffffff; /* Color de fondo del polígono */
+  clip-path: polygon(100% 100%, 57.75% 15.5%, 51.82% 27.37%, 51.82% 83.91%, 59.82% 83.91%, 59.82% 41.63%, 89% 100%); /* Define el polígono */
+  transition: clip-path 0.25s ease-in-out; /* Establece una animación suave */
+}
+
+.logo:hover .M{
+   clip-path: polygon(100% 100%, 57.75% 15.5%, 52.25% 26.5%, 52.25% 26.5%, 59.82% 41.63%, 59.82% 41.63%, 89% 100%);
+}
+
+
+
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color4);
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  width: 100%;
+  height: 100vh;
+}
+
+#profile-photo{
+  border-radius: 50%;
+  border: solid 10px var(--main-color4);
+  width: 300px;
+}
+
+#typing-text{
+  display: flex;
+  flex-direction: row;
+  margin: -30px 0 0 0;
+}
+
+#type-text{
+  color: var(--main-color3);
+  font-size: 2.5em;
+  font-style: italic;
+  content: "";
+}
+
+#border {
+  color: var(--main-color3);
+  font-size: 2.5em;
+  font-style: italic;
+  rgba(0,255,0,.75);
+  width: 15px;
+  animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+@keyframes animated-cursor{
+  from{color: var(--main-color3);}
+  to{color: transparent;}
+}
+
+#projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color2);
+  min-height: 100vh;
+  padding: 2em 2em;
+}
+
+#projects>h2{
+  margin-bottom: 50px;
+}
+
+#project-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 6em;
+}
+
+.project-tile{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  height: auto;
+  background-color: var(--main-color1);
+  box-shadow: 2px 2px 2px black;
+  text-decoration: none;
+}
+
+.project-tile:hover .link-decoration{
+    color: var(--main-color2);
+    transition: color 0.3s ease-in;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-title{
+  font-size: 3em;
+  color: var(--main-color4);
+  align-self: center;
+  margin: auto;
+}
+
+.link-decoration{
+  color: transparent;
+  transition: color 0.5s ease-out;
+}
+
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color1);
+  width: 100%;
+  height: 100vh;
+}
+
+#links-section{
+  display: grid;
+  justify-items: center;
+  grid-gap: 10vh;
+  margin-top: 5em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.logo-img{
+  height: 60px;
+}
+
+.logo-img:hover{
+  animation-name: logo-hover;
+  animation-duration: 500ms;
+}
+
+@keyframes logo-hover{
+  20%{
+    transform:rotate(10deg);
+  }
+  60%{
+    transform:rotate(-10deg);
+  }
+  80%{
+    transform:rotate(0deg);
+  }
+}
+
+#type-text:after {
+  content: "";
+  animation: type-text 7.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+  @keyframes type-text {
+  0% {
+    content: "a";
+    }
+2% {
+    content: "a ";
+    }
+4% {
+    content: "a S";
+    }
+6% {
+    content: "a Sc";
+    }
+8% {
+    content: "a Scr";
+    }
+10% {
+    content: "a Scri";
+    }
+12% {
+    content: "a Scrip";
+    }
+14% {
+    content: "a Script";
+    }
+16% {
+    content: "a Script ";
+    }
+18% {
+    content: "a Script K";
+    }
+20% {
+    content: "a Script Ki";
+    }
+22% {
+    content: "a Script Kid";
+    }
+24% {
+    content: "a Script Kidd";
+    }
+26% {
+    content: "a Script Kiddi";
+    }
+28% {
+    content: "a Script Kiddie";
+    }
+28.5% {
+    content: "a Script Kiddi";
+  }
+29% {
+    content: "a Script Kidd";
+    }
+29.5% {
+    content: "a Script Kid";
+  }
+30% {
+    content: "a Script Ki";
+    }
+30.5% {
+    content: "a Script K";
+  }
+31% {
+    content: "a Script ";
+    }
+31.5% {
+    content: "a Script";
+  }
+32% {
+    content: "a Scrip";
+    }
+33.5% {
+    content: "a Scri";
+  }
+34% {
+    content: "a Scr";
+    }
+35.5% {
+    content: "a Sc";
+  }
+36% {
+    content: "a S";
+    }
+37.5% {
+    content: "a ";
+  }
+38% {
+    content: "a H";
+    }
+40% {
+    content: "a Ha";
+    }
+42% {
+    content: "a Hac";
+    }
+44% {
+    content: "a Hack";
+    }
+46% {
+    content: "a Hacke";
+    }
+48% {
+    content: "a Hacker";
+    }
+50% {
+    content: "a Hacker ";
+    }
+52% {
+    content: "a Hacker u";
+    }
+54% {
+    content: "a Hacker un";
+    }
+56% {
+    content: "a Hacker und";
+    }
+58% {
+    content: "a Hacker unde";
+    }
+60% {
+    content: "a Hacker under";
+    }
+62% {
+    content: "a Hacker under ";
+    }
+64% {
+    content: "a Hacker under d";
+    }
+66% {
+    content: "a Hacker under de";
+    }
+68% {
+    content: "a Hacker under dev";
+    }
+70% {
+    content: "a Hacker under deve";
+    }
+72% {
+    content: "a Hacker under devel";
+    }
+74% {
+    content: "a Hacker under develo";
+    }
+76% {
+    content: "a Hacker under develop";
+    }
+78% {
+    content: "a Hacker under developm";
+    }
+80% {
+    content: "a Hacker under developme";
+    }
+82% {
+    content: "a Hacker under developmen";
+    }
+84% {
+    content: "a Hacker under development";
+    }
+98% {
+  content: "a Hacker under development";
+  }
+98.25% {
+    content: "a̷ ̵H̷a̵c̵k̵e̶r̵ ̵u̴n̵d̶e̵r̶ ̶d̶e̷v̶e̸l̷o̴p̵m̸e̸n̴t̶";
+    }    
+99.25% {
+    content: "à̸̤ ̴̣͇́Ḣ̸̛͈̗á̸̝c̵̡̎̕k̵̭͋͝e̶̟͂̑r̵͓̲͒ ̵̮̣͘͠ů̸͙n̷̳͂d̶̲̀̅ë̸̥͓́͠r̸͑͜͠ ̸̩͆̑d̸̩̺͛e̴̼̝͆v̶̨̂e̶͙̍̍l̵̠͉̽̆o̸̺̓p̴̟͇̂m̴̧̰͌̓ẽ̶̚͜ǹ̶̬͕͠t̸̗͆̊";
+    }
+100% {
+      content: "a Hacker under development";
+    }
+
+}
+
+@media (min-width: 1401px) and (orientation:landscape){
+  #navbar>a{
+    font-size: 2.5em;
+  }
+  h1{
+    font-size: 6rem;
+  }
+  h2{
+    font-size: 5rem;
+  }
+  #profile-photo{
+    border: solid 10px var(--main-color4);
+    width: 300px;
+  }
+  #type-text{
+  font-size: 3em;
+  }
+  #border {
+    font-size: 3em;
+    width: 20px;
+  }
+  .logo-img{
+  height: 60px;
+  }
+}
+
+/* ##Device = Laptops, Desktops */
+@media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape){
+  #navbar>a{
+    font-size: 2.5em;
+  }
+  h1{
+    font-size: 6rem;
+  }
+  h2{
+    font-size: 5rem;
+  }
+  #profile-photo{
+    border: solid 10px var(--main-color4);
+    width: 300px;
+  }
+  #type-text{
+  font-size: 3em;
+  }
+  #border {
+    font-size: 3em;
+    width: 20px;
+  }
+  .logo-img{
+  height: 60px;
+  }
+}
+
+/* ##Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait){
+  #navbar>a{
+    font-size: 2vh;
+  }
+  h1{
+    font-size: 4vh;
+  }
+  h2{
+    font-size: 3vh;
+  }
+  #profile-photo{
+    border: solid 10px var(--main-color4);
+    width: 25vh;
+  }
+  #type-text{
+  font-size: 2vh;
+  }
+  #border {
+    font-size: 2vh;
+    width: 2vh;
+  }
+  #project-grid{
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  #links-section{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-img{
+    height: 80px;
+  }
+}
+
+/* ##Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+
+}
+
+/* ##Device = Tablets, Ipads (landscape) */
+@media (min-width: 768px) and (max-width: 1080px) and (orientation: landscape) {
+  #navbar>a{
+    font-size: 2.5em;
+  }
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 4rem;
+  }
+  #profile-photo{
+    border: solid 8px var(--main-color4);
+    width: 250px;
+  }
+  #type-text{
+  font-size: 2.5em;
+  }
+  #border {
+    font-size: 2.5em;
+    width: 15px;
+  }
+  .logo-img{
+  height: 60px;
+  }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+ 
+ /*##Device = Most of the Smartphones Mobiles (Portrait) */
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait){  
+}

@@ -19,35 +19,106 @@
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta charset="utf-8">
+  <link  rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+  <link  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
+  <link  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>
   <title>Ángel L.M.</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-		<p id="title">Ángel LM</p>
-
-		<div id="central_section">
-			<p>Hello! My name is Ángel Larrañaga Muro, and I am a Maker.</p>
-			<p>When I was a kid I wanted to be a paleontologist, but when I realised that if I found fossils I could not keep them, I decided to become something related with robots. Maybe to build a cyborg dinosaur? Who knows...</p>
-			<p>I have been working as Electronic &amp; Automation Engineer since 2015.<br>I learned about Programming, 3D Design, Industrial Automation, Robotics and many more useful skills.</p>
-			<p>I think that it is important to share the knowledge and guarantee its access for everyone, everywhere. <br> That is why I share my personal projects on GitHub using OpenSource licenses. <br> Apart from robotics and electronics, my other great passion is to travel. I dream with a trip around the world!</p>
-			<p>If you want to see my projects or know more about me, do not hesitate to click on the links below!</p>
-  
-			<img id="foto" src="img/foto.png">
-  
-			<div id="social-section">
-				<div class="image-holder"><a href="https://twitter.com/_AngelLM"><img class="icon-image" src="img/twitter.png" alt="twitter"></a></div>
-				<div class="image-holder"><a href="https://www.youtube.com/AngelLM"><img class="icon-image" src="img/youtube.png"alt="youtube"></a></div>
-				<div class="image-holder"><a href="https://www.linkedin.com/in/angellarranagamuro/"><img class="icon-image" src="img/linkedin.png"alt="linkedin"></a></div>
-			</div>
-			<hr>
-    
-			<div id="project-section">
-				<div class="link-holder"><a href="https://github.com/AngelLM?tab=repositories">GitHub</a></div>
-				<div class="link-holder"><a href="https://hackaday.io/AngelLM">Hackaday</a></div>
-				<div class="link-holder"><a href="https://www.thingiverse.com/angellm/designs">Thingiverse</a></div>
-			</div>
-		</div>
+  <nav id="navbar">
+    <div id="logo">
+      <div class="logo">
+        <div class="A"></div>
+        <div class="L"></div>
+        <div class="M"></div>  
+      </div>
+    </div>
+    <div id="navbar-links">
+      <a href="#welcome-section">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <main>
+    <section id="welcome-section">
+      <img id="profile-photo" src="https://www.angel-lm.com/img/foto2.jpg" alt="profile photo">
+      <h1>Hi! I am Ángel LM</h1>
+      <div id="typing-text"><p id="type-text"><p id="border">_</p></p></div>
+      
+    </section>
+    <section id="projects">
+      <h2>These are some of my projects</h2>
+      <div id="project-grid">
+        <a class="project-tile" href="https://www.angel-lm.com/MCD/" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/mandodisplay.gif" alt="Screenshot of the Mando Display App showing a custom light sequence">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            Mando App
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+        <a class="project-tile" href="https://maple-talon-4ea.notion.site/JuliGate-Creando-un-bot-de-Twitter-con-Python-y-RPI-6732f7589b774b94a855a5034d2ab9ab" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/twitterbot.png" alt="Screenshot of some tweets sent by the user @jcarolinares and the automatic tweet responses of the twitter bot">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            Twitter Bot
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+        <a class="project-tile" href="http://thor.angel-lm.com" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/thor.png" alt="Photo of a red 3D Printed robotic arm">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            Thor
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+        <a class="project-tile" href="https://github.com/AngelLM/Asgard" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/asgard.gif" alt="Screenshot of Asgard software controlling a robot arm">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            Asgard
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+        <a class="project-tile" href="https://github.com/AngelLM/ThorControlPCB" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/controlpcb.png" alt="Photo of a custom electronic PCB designed and assembled by Angel">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            Control PCB
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+        <a class="project-tile" href="https://cults3d.com/en/users/angellm/creations" target=_blank>
+          <img class="project-img" src="https://www.angel-lm.com/img/design.png" alt="Photo of a 3D printed treasure box and jewelry designed by Angel">
+          <p class="project-title">
+            <span class="link-decoration"><</span>
+            3D Designs
+            <span class="link-decoration">/></span>
+          </p>
+        </a>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Let's keep in touch!</h2>
+      <div id="links-section">
+        <a href="https://twitter.com/_angellm" target=_blank>
+          <img class="logo-img" src="https://angel-lm.com/img/twitter.png" alt="twitter logo"/>
+        </a>
+        <a id="profile-link"href="https://github.com/AngelLM" target=_blank>
+          <img class="logo-img" src="https://angel-lm.com/img/github.png" alt="github logo"/>
+        </a>
+        <a href="https://www.youtube.com/angellm" target=_blank>
+          <img class="logo-img" src="https://angel-lm.com/img/youtube2.png" alt="youtube logo"/>
+        </a>
+        <a href="https://www.linkedin.com/in/angellarranagamuro/" target=_blank>
+          <img class="logo-img" src="https://angel-lm.com/img/linkedin.png" alt="linkedin logo"/>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
